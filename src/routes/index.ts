@@ -5,7 +5,7 @@ import { Intervene } from '../middlewares/Intervene'
 
 const router = express.Router()
 
-router.use(Intervene)
+//router.use(Intervene)
 
 router.use('/produtos', produtosRouter)
 router.use('/voos', voosRouter)
@@ -18,6 +18,8 @@ router.get('/ping',(req,res) =>{
 })
 
 router.get('/', (req,res) =>{
+
+
     let resposta:string ="Olá mundo"
     res.json({resposta})
 })
